@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Firebase IDP</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #ccc; margin: 0; padding: 40px; text-align: center; min-height: 100vh; }
+        a.button, input[type=submit] { background-color: #1a73e8; border: none; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-size: 16px; cursor: pointer; transition: background-color 0.3s; }
+        a.button:hover, input[type=submit]:hover { background-color: #135aba; }
+        form { margin-top: 20px; }
+        input[type=email], input[type=password] { width: 250px; padding: 10px; margin-top: 10px; border-radius: 8px; border: 1px solid #333; background-color: #222; color: white; }
+        h1, h2 { color: #aad; }
+        p { color: #ddd; }
+    </style>
+</head>
+<body>
+    <p>This is a demo application to show different authentication ways using Microsoft / Firebase (Using Azure EntraID and Firebase Authentication)</p>
+    <h1>Microsoft</h1>
+    <a href="/login" class="button">Sign Up / Log in with Microsoft</a>
+    <h1>Firebase</h1>
+    <h2>Sign In</h2>
+    <form action="/login-email" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Log in with Email">
+    </form>
+    <h2>Sign Up</h2>
+    <form action="/signup-email" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="submit" value="Sign Up with Email">
+    </form>
+    <h2>Reset Your Password</h2>
+    <p>Enter your email address below, and we'll send you a link to reset your password.</p>
+    <form action="/send-password-reset-email" method="post">
+        <input type="email" name="email" placeholder="Your email" required><br>
+        <input type="submit" value="Send Reset Email">
+    </form>
+</body>
+</html>
